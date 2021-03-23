@@ -10,12 +10,24 @@
 <h2>{{selectedHero.name | uppercase}} detalles</h2>
 <div><span>id: </span>{{selectedHero.id}}</div>
 <div>
-<label for = "hero-name">Heroe Nombre: </label>
+<label for = "hero-name">Nombre del Heroe: </label>
 <input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="nombre">
 </div>
 <div>
-<label for = "hero-edad">Heroe Edad: </label>
+<label for = "hero-edad">Edad del Heroe: </label>
 <input id="hero-edad" [(ngModel)]="selectedHero.edad" placeholder="edad">
+</div>
+<div>
+<label for = "hero-poder">Poder del Heroe: </label>
+<input id="hero-poder" [(ngModel)]="selectedHero.poder" placeholder="poder">
+</div>
+<div>
+<label for = "hero-identidad">Poder del Heroe: </label>
+<input id="hero-identidad" [(ngModel)]="selectedHero.identidad" placeholder="identidad">
+</div>
+<div>
+<label for = "hero-mundo">Mundo del Heroe: </label>
+<input id="hero-mundo" [(ngModel)]="selectedHero.mundo" placeholder="mundo">
 </div>
 
 </div>
