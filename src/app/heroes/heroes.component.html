@@ -1,33 +1,33 @@
 <h2>Mis heroes Favoritos</h2>
 <ul class="heroes">
-<li *ngFor="let hero of heroes"
-[class.selected]="hero === selectedHero"
-(click)="onSelect(hero)">
-<span class="badge">{{hero.id}}</span>{{hero.name}}
-</li>
+  <li *ngFor="let hero of heroes"
+    [class.selected]="hero === selectedHero"
+      (click)="onSelect(hero)">
+      <span class="badge">{{hero.id}}</span>{{hero.name}}
+    </li>
 </ul>
+
 <div *ngIf="selectedHero">
-<h2>{{selectedHero.name | uppercase}} detalles</h2>
-<div><span>id: </span>{{selectedHero.id}}</div>
-<div>
-<label for = "hero-name">Nombre del Heroe: </label>
-<input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="nombre">
+  <h2>{{selectedHero.name | uppercase}} detalles</h2>
+  <div><span>id: </span>{{selectedHero.id}}</div>
+  <div>
+    <label for = "hero-name">Heroe Nombre: </label>
+      <input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="nombre">
+    </div>
+    <div>
+    <label for = "hero-edad">Heroe Edad: </label>
+      <input id="hero-edad" [(ngModel)]="selectedHero.edad" placeholder="edad">
+    </div>
+    <div>
+    <label for = "hero-poder">Poder del Heroe: </label>
+      <input id="hero-poder" [(ngModel)]="selectedHero.poder" placeholder="poder">
+    </div>
+    <div>
+    <label for = "hero-identidad">Identidad del Heroe: </label>
+      <input id="hero-identidad" [(ngModel)]="selectedHero.identidad" placeholder="identidad">
+    </div>
+    <div>
+    <label for = "hero-mundo">Mundo del Heroe: </label>
+      <input id="hero-mundo" [(ngModel)]="selectedHero.mundo" placeholder="mundo">
+    </div>
 </div>
-<div>
-<label for = "hero-edad">Edad del Heroe: </label>
-<input id="hero-edad" [(ngModel)]="selectedHero.edad" placeholder="edad">
-</div>
-<div>
-<label for = "hero-poder">Poder del Heroe: </label>
-<input id="hero-poder" [(ngModel)]="selectedHero.poder" placeholder="poder">
-</div>
-<div>
-<label for = "hero-identidad">Poder del Heroe: </label>
-<input id="hero-identidad" [(ngModel)]="selectedHero.identidad" placeholder="identidad">
-</div>
-<div>
-<label for = "hero-mundo">Mundo del Heroe: </label>
-<input id="hero-mundo" [(ngModel)]="selectedHero.mundo" placeholder="mundo">
-</div>
-</div>
-<app-hero-detail [hero] = "selectedHero"> </app-hero-detail>
